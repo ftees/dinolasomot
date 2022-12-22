@@ -9,20 +9,60 @@
   </head>
 
   <body>
-   
+    
     <!-- </div> -->
-    <div class="title">
-      <!-- EDIT HERE -->
-      <h3 class="STARDUST1">2022</h3>
-      <h1 class="STARDUST2">Teddy &amp; Mie</h1>
-      <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
-      <img class="img" src="EDIT_ME.png" alt="JUNO_OKYO" />
-      <canvas id="pinkboard"></canvas>
+      <div class="gift" onclick="onClick()">
+  
+    <div class="gift__bow">
+      <div class="gift__bow-left"></div>
+      <div class="gift__bow-right"></div>
+      <div class="gift__bow-center"></div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/particle.js"></script>
-    <script src="js/universe.js"></script>
+    <div class="gift__box">
+      <div class="gift__lid-shadow"></div>
+    </div>
+    <div class="gift__lid"></div>
+    <div class="gift__star gift__star--1"></div>
+    <div class="gift__star gift__star--2"></div>
+    <div class="gift__star gift__star--3"></div>
+    <div class="gift__star gift__star--4"></div>
+    <div class="gift__star gift__star--5"></div>
+    
+  </div>
+  <audio
+    controls
+    autoplay
+  >
+  <source src="./noel.mp3" >
+    </audio>
+  <script>
+     function onClick() {
+    
+      const { value: ipAddress } =  Swal.fire({
+      title: 'Enter password to open the gift',
+      input: 'password',
+      inputLabel: '(Hint: 6 numbers)',
+      
+      showCancelButton: true,
+      inputValidator: (value) => {
+    if (value !== '120722') {
+      return 'Khoai is crying 😢😢'
+    }
+    else {
+      Swal.fire({
+        title: 'Merry Xmas 🎄🎄 I love you 💕💕',
+        imageUrl: './noel.jpg',
+        backdrop: false,
+        imageWidth: 400,
+        imageHeight: 600,
+        width: 800,
+      })
+}
+  }
+})
+     }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
+  
 </html>
